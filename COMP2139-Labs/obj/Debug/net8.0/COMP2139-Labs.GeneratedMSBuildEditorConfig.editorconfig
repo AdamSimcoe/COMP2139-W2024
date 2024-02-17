@@ -1,11 +1,19 @@
 is_global = true
 build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
 build_property.TargetPlatformMinVersion = 
 build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
 build_property.ProjectTypeGuids = 
 build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
 build_property.PlatformNeutralAssembly = 
 build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = COMP2139_Labs
 build_property.RootNamespace = COMP2139_Labs
@@ -30,8 +38,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvamVjdHNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/ninja/Documents/George Brown Year 2 Documents/Winter Semester/COMP 2139 Web Application Development/Repos/COMP2139-W2024/COMP2139-Labs/Views/Projects/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvamVjdHNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/ninja/Documents/George Brown Year 2 Documents/Winter Semester/COMP 2139 Web Application Development/Repos/COMP2139-W2024/COMP2139-Labs/Views/Projects/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvamVjdHNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ninja/Documents/George Brown Year 2 Documents/Winter Semester/COMP 2139 Web Application Development/Repos/COMP2139-W2024/COMP2139-Labs/Views/Projects/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvamVjdHNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ninja/Documents/George Brown Year 2 Documents/Winter Semester/COMP 2139 Web Application Development/Repos/COMP2139-W2024/COMP2139-Labs/Views/Projects/Index.cshtml]
@@ -44,6 +60,26 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/ninja/Documents/George Brown Year 2 Documents/Winter Semester/COMP 2139 Web Application Development/Repos/COMP2139-W2024/COMP2139-Labs/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ninja/Documents/George Brown Year 2 Documents/Winter Semester/COMP 2139 Web Application Development/Repos/COMP2139-W2024/COMP2139-Labs/Views/Tasks/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFza3NcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ninja/Documents/George Brown Year 2 Documents/Winter Semester/COMP 2139 Web Application Development/Repos/COMP2139-W2024/COMP2139-Labs/Views/Tasks/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFza3NcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ninja/Documents/George Brown Year 2 Documents/Winter Semester/COMP 2139 Web Application Development/Repos/COMP2139-W2024/COMP2139-Labs/Views/Tasks/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFza3NcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ninja/Documents/George Brown Year 2 Documents/Winter Semester/COMP 2139 Web Application Development/Repos/COMP2139-W2024/COMP2139-Labs/Views/Tasks/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFza3NcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ninja/Documents/George Brown Year 2 Documents/Winter Semester/COMP 2139 Web Application Development/Repos/COMP2139-W2024/COMP2139-Labs/Views/Tasks/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFza3NcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ninja/Documents/George Brown Year 2 Documents/Winter Semester/COMP 2139 Web Application Development/Repos/COMP2139-W2024/COMP2139-Labs/Views/_ViewImports.cshtml]
