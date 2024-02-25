@@ -1,0 +1,250 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+  background-image: url('../images/waterfall background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Footer Container */
+.footer-container {
+    text-align: center;
+    color:rgba(0,0,0,0.5)
+}
+
+
+/* Featured Section format */
+.featured-section {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.featured-section h2 {
+    margin-bottom: 10px;
+}
+
+.featured-section .destination,
+.featured-section .hotel,
+.featured-section .rental {
+    display: inline-block;
+    width: 30%;
+    height: 200px;
+    margin-right: 20px;
+    vertical-align: top;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.featured-section .destination img,
+.featured-section .hotel img,
+.featured-section .rental img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.featured-section p {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    padding: 5px 10px;
+    margin: 0;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Home Page Search Bar */
+
+.search-bar {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.search-bar .form-control {
+    padding: 10px;
+    width: 60%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    display: inline-block;
+    margin-right: 10px;
+    box-sizing: border-box;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.search-bar button:hover {
+    background-color: #0056b3;
+}
+
+/* create - edit forms */
+.form-box {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.form-box label.control-label {
+font-weight: bold;
+color: #333;
+}
+
+/* index table */
+.table-custom {
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.table-custom th,
+.table-custom td {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.table-custom th {
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.table-custom tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Buttons */
+.btn-custom {
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+/* Details and Delete views */
+.details-box,
+.delete-box {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.details-box dt,
+.delete-box dt {
+    font-weight: bold;
+}
+
+.details-box dd,
+.delete-box dd {
+    margin-bottom: 10px;
+}
+
+.center-text {
+    text-align: center;
+}
+
+/* Index Table Search Form */
+.search-form {
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 33%; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.search-title {
+    margin-bottom: 10px;
+    text-align: center; 
+    font-size: 24px;
+}
+
+.search-form .form-row {
+    flex-wrap: nowrap;
+    width: 100%;
+    justify-content: center; 
+}
+
+.search-form .form-control, .search-form select, .search-form .btn-primary {
+    margin: 0 5px; 
+}
+
+.search-form .btn-primary {
+    border-radius: 0.25rem;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.search-form .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+
+.search-form label {
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 767px) {
+    .search-form {
+        width: 90%; 
+        flex-direction: column; 
+    }
+
+    .search-form .form-row {
+        flex-wrap: wrap;
+        justify-content: center; 
+    }
+
+    .search-form .col-auto, .search-form button {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding-bottom: 10px;
+    }
+
+    .search-form button {
+        width: auto; 
+    }
+}
+

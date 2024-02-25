@@ -1,0 +1,73 @@
+﻿@model List<GBC_Travel_Group_42.Models.CarRental>
+
+@{
+    ViewData["Title"] = "Car Rental Bookings";
+}
+
+<div class="search-form">
+    <h2 class="search-title">Search Car Rentals</h2>
+    <form asp-action="Index" method="get">
+        <div class="form-group">
+            <label for="searchName">Search by Car Rental Make</label>
+            <input type="text" class="form-control" id="searchCarMake" name="searchCarMake" placeholder="ex. 2024 Nissan Rogue">
+        </div>
+        <div class="form-group">
+            <label for="minRating">Filter by minimum rating</label>
+            <select class="form-control" id="minRating" name="minRating">
+                <option value="">ex. 3 stars</option>
+                @for (int i = 1; i <= 5; i++)
+                {
+                    <option value="@i">@i star@(i > 1 ? "s" : "")</option>
+                }
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="maxPricePerDay">Filter by maximum price per day</label>
+            <input type="text" class="form-control" id="maxPricePerDay" name="maxPricePerDay" placeholder="ex. 59.99">
+        </div>
+        <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+</div>
+
+<div class="table-custom">
+    <h2 class="center-text">Car Rental Bookings</h2>
+
+    @if (Model.Any())
+    {
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Car Rental Make</th>
+                    <th>Price Per Day</th>
+                    <th>Rating</th>
+                </tr>
+            </thead>
+
+            @foreach (var carRental in Model)
+            {
+                <tbody>
+                    <tr>
+                        <td>@carRental.CarRentalMake</td>
+                        <td>$@carRental.PricePerDay</td>
+                        <td>@carRental.Rating stars</td>
+                        <td>
+                            <a asp-controller="BookCarRental" asp-action="Create" asp-route-carRentalId="@carRental.CarRentalId" class="btn btn-info">Book</a>
+                            <a asp-action="Details" asp-route-id="@carRental.CarRentalId" class="btn btn-info">Details</a>
+                            <a asp-action="Edit" asp-route-id="@carRental.CarRentalId" class="btn btn-primary">Edit</a>
+                            <a asp-action="Delete" asp-route-id="@carRental.CarRentalId" class="btn btn-danger">Delete</a>
+                        </td>
+                    </tr>
+                </tbody>
+            }
+        </table>
+    }
+    else
+    {
+        <p>No car rental bookings available.</p>
+    }
+
+    <p>
+        <a asp-area="" asp-controller="CarRental" asp-action="Create" class="btn btn-primary">Create New Car Rental</a>
+        <a asp-area="" asp-controller="BookCarRental" asp-action="Index" class="btn btn-info">View Car Rental Bookings</a>
+    </p>
+</div>

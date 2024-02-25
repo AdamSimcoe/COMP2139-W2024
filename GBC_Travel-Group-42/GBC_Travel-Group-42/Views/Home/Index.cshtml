@@ -1,0 +1,90 @@
+﻿@{
+    ViewData["Title"] = "GBC Travel Agency";
+}
+
+<div class="text-center">
+    <h1 class="display-4" style="color: #1a1a1a;">Welcome to GBC Travel Agency</h1>
+    <p style="color: #333;"><strong>Created by Adam Simcoe - 101442161</strong></p>
+
+    <div class="search-bar">
+       <select id="searchOption" class="form-control">
+           <option value="">The World is your limit...</option>
+           <option value="Flight">Flights</option>
+           <option value="Hotel">Hotels</option>
+           <option value="CarRental">Car Rentals</option>
+       </select>
+       <button type="button" id="searchButton">Search</button>
+    </div>
+</div>
+
+<div class="featured-section">
+    <h2>Featured Destinations</h2>
+    <div class="destination">
+        <img src="~/images/destinations/Paris.jpg" alt="Paris, France" />
+        <p>Paris, France</p>
+    </div>
+    <div class="destination">
+        <img src="~/images/destinations/Tokyo.jpeg" alt="Tokyo, Japan" />
+        <p>Tokyo, Japan</p>
+    </div>
+    <div class="destination">
+        <img src="~/images/destinations/Athens.jpg" alt="Athens, Greece" />
+        <p>Athens, Greece</p>
+    </div>
+</div>
+
+<div class="featured-section">
+    <h2>Featured Resorts</h2>
+    <div class="hotel">
+        <img src="~/images/hotels/Hotel Le Grand Mazarin.jpg" alt="Hotel Le Grand Mazarin, Paris" />
+        <p>Hotel Le Grand Mazarin, Paris</p>
+    </div>
+    <div class="hotel">
+        <img src="~/images/hotels/Hotel New Otani Tokyo.jpg" alt="Hotel New Otani Tokyo, Tokyo" />
+        <p>Hotel New Otani Tokyo, Tokyo</p>
+    </div>
+    <div class="hotel">
+        <img src="~/images/hotels/Arion Athens Hotel.jpg" alt="Arion Athens Hotel, Athens" />
+        <p>Arion Athens Hotel, Athens</p>
+    </div>
+</div>
+
+<div class="featured-section">
+    <h2>Featured Rentals</h2>
+    <div class="rental">
+        <img src="~/images/vehicles/2019 Chevrolet Malibu.jpg" alt="2019 Chevrolet Malibu" />
+        <p>2019 Chevrolet Malibu</p>
+    </div>
+    <div class="rental">
+        <img src="~/images/vehicles/2024 Nissan Rogue.jpg" alt="2024 Nissan Rogue" />
+        <p>2024 Nissan Rogue</p>
+    </div>
+    <div class="rental">
+        <img src="~/images/vehicles/2024 Toyota Sienna.jpg" alt="2024 Toyota Sienna" />
+        <p>2024 Toyota Sienna</p>
+    </div>
+</div>
+
+<!-- Search Bar script -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("searchButton").addEventListener("click", function () {
+            var searchOption = document.getElementById("searchOption").value;
+
+            switch (searchOption) {
+                case 'Flight':
+                    window.location.href = '/Flight';
+                    break;
+                case 'Hotel':
+                    window.location.href = '/Hotel';
+                    break;
+                case 'CarRental':
+                    window.location.href = '/CarRental';
+                    break;
+                default:
+                    alert('Please select a search option.');
+                    break;
+            }
+        });
+    });
+</script>

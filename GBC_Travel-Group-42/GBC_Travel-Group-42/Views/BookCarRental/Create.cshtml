@@ -1,0 +1,62 @@
+﻿@model GBC_Travel_Group_42.Models.BookCarRental
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+<div class="form-box">
+    <h4>Create Car Rental Booking</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="GuestFirstName" class="control-label"></label>
+                    <input asp-for="GuestFirstName" class="form-control" />
+                    <span asp-validation-for="GuestFirstName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="GuestLastName" class="control-label"></label>
+                    <input asp-for="GuestLastName" class="form-control" />
+                    <span asp-validation-for="GuestLastName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="GuestEmail" class="control-label"></label>
+                    <input asp-for="GuestEmail" class="form-control" />
+                    <span asp-validation-for="GuestEmail" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Accommodations" class="control-label"></label>
+                    <input asp-for="Accommodations" class="form-control" />
+                    <span asp-validation-for="Accommodations" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="CarRentalId" class="control-label">Car Make</label>
+                    <select asp-for="CarRentalId" class ="form-control" asp-items="ViewBag.CarRentals"></select>
+                </div>
+                <div class="form-group">
+                    <label asp-for="RentalPickupDateTime" class="control-label"></label>
+                    <input asp-for="RentalPickupDateTime" class="form-control" />
+                    <span asp-validation-for="RentalPickupDateTime" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="RentalDuration" class="control-label"></label>
+                    <input asp-for="RentalDuration" class="form-control" />
+                    <span asp-validation-for="RentalDuration" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <a asp-action="Index">Back to List</a>
+    </div>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

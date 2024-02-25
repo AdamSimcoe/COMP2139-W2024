@@ -1,0 +1,179 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = GBC_Travel_Group_42
+build_property.RootNamespace = GBC_Travel_Group_42
+build_property.ProjectDir = C:\Users\ninja\Documents\George Brown Year 2 Documents\Winter Semester\COMP 2139 Web Application Development\Repos\COMP2139-W2024\GBC_Travel-Group-42\GBC_Travel-Group-42\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\ninja\Documents\George Brown Year 2 Documents\Winter Semester\COMP 2139 Web Application Development\Repos\COMP2139-W2024\GBC_Travel-Group-42\GBC_Travel-Group-42
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/ninja/Documents/George Brown Year 2 Documents/Winter Semester/COMP 2139 Web Application Development/Repos/COMP2139-W2024/GBC_Travel-Group-42/GBC_Travel-Group-42/Views/BookCarRental/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va0NhclJlbnRhbFxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ninja/Documents/George Brown Year 2 Documents/Winter Semester/COMP 2139 Web Application Development/Repos/COMP2139-W2024/GBC_Travel-Group-42/GBC_Travel-Group-42/Views/BookCarRental/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va0NhclJlbnRhbFxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ninja/Documents/George Brown Year 2 Documents/Winter Semester/COMP 2139 Web Application Development/Repos/COMP2139-W2024/GBC_Travel-Group-42/GBC_Travel-Group-42/Views/BookCarRental/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va0NhclJlbnRhbFxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ninja/Documents/George Brown Year 2 Documents/Winter Semester/COMP 2139 Web Application Development/Repos/COMP2139-W2024/GBC_Travel-Group-42/GBC_Travel-Group-42/Views/BookCarRental/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va0NhclJlbnRhbFxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ninja/Documents/George Brown Year 2 Documents/Winter Semester/COMP 2139 Web Application Development/Repos/COMP2139-W2024/GBC_Travel-Group-42/GBC_Travel-Group-42/Views/BookCarRental/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va0NhclJlbnRhbFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ninja/Documents/George Brown Year 2 Documents/Winter Semester/COMP 2139 Web Application Development/Repos/COMP2139-W2024/GBC_Travel-Group-42/GBC_Travel-Group-42/Views/BookFlight/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va0ZsaWdodFxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ninja/Documents/George Brown Year 2 Documents/Winter Semester/COMP 2139 Web Application Development/Repos/COMP2139-W2024/GBC_Travel-Group-42/GBC_Travel-Group-42/Views/BookFlight/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va0ZsaWdodFxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ninja/Documents/George Brown Year 2 Documents/Winter Semester/COMP 2139 Web Application Development/Repos/COMP2139-W2024/GBC_Travel-Group-42/GBC_Travel-Group-42/Views/BookFlight/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va0ZsaWdodFxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ninja/Documents/George Brown Year 2 Documents/Winter Semester/COMP 2139 Web Application Development/Repos/COMP2139-W2024/GBC_Travel-Group-42/GBC_Travel-Group-42/Views/BookFlight/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va0ZsaWdodFxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ninja/Documents/George Brown Year 2 Documents/Winter Semester/COMP 2139 Web Application Development/Repos/COMP2139-W2024/GBC_Travel-Group-42/GBC_Travel-Group-42/Views/BookFlight/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va0ZsaWdodFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ninja/Documents/George Brown Year 2 Documents/Winter Semester/COMP 2139 Web Application Development/Repos/COMP2139-W2024/GBC_Travel-Group-42/GBC_Travel-Group-42/Views/BookHotel/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va0hvdGVsXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ninja/Documents/George Brown Year 2 Documents/Winter Semester/COMP 2139 Web Application Development/Repos/COMP2139-W2024/GBC_Travel-Group-42/GBC_Travel-Group-42/Views/BookHotel/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va0hvdGVsXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ninja/Documents/George Brown Year 2 Documents/Winter Semester/COMP 2139 Web Application Development/Repos/COMP2139-W2024/GBC_Travel-Group-42/GBC_Travel-Group-42/Views/BookHotel/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va0hvdGVsXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ninja/Documents/George Brown Year 2 Documents/Winter Semester/COMP 2139 Web Application Development/Repos/COMP2139-W2024/GBC_Travel-Group-42/GBC_Travel-Group-42/Views/BookHotel/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va0hvdGVsXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ninja/Documents/George Brown Year 2 Documents/Winter Semester/COMP 2139 Web Application Development/Repos/COMP2139-W2024/GBC_Travel-Group-42/GBC_Travel-Group-42/Views/BookHotel/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va0hvdGVsXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ninja/Documents/George Brown Year 2 Documents/Winter Semester/COMP 2139 Web Application Development/Repos/COMP2139-W2024/GBC_Travel-Group-42/GBC_Travel-Group-42/Views/CarRental/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyUmVudGFsXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ninja/Documents/George Brown Year 2 Documents/Winter Semester/COMP 2139 Web Application Development/Repos/COMP2139-W2024/GBC_Travel-Group-42/GBC_Travel-Group-42/Views/CarRental/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyUmVudGFsXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ninja/Documents/George Brown Year 2 Documents/Winter Semester/COMP 2139 Web Application Development/Repos/COMP2139-W2024/GBC_Travel-Group-42/GBC_Travel-Group-42/Views/CarRental/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyUmVudGFsXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ninja/Documents/George Brown Year 2 Documents/Winter Semester/COMP 2139 Web Application Development/Repos/COMP2139-W2024/GBC_Travel-Group-42/GBC_Travel-Group-42/Views/CarRental/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyUmVudGFsXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ninja/Documents/George Brown Year 2 Documents/Winter Semester/COMP 2139 Web Application Development/Repos/COMP2139-W2024/GBC_Travel-Group-42/GBC_Travel-Group-42/Views/CarRental/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyUmVudGFsXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ninja/Documents/George Brown Year 2 Documents/Winter Semester/COMP 2139 Web Application Development/Repos/COMP2139-W2024/GBC_Travel-Group-42/GBC_Travel-Group-42/Views/Flight/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmxpZ2h0XENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ninja/Documents/George Brown Year 2 Documents/Winter Semester/COMP 2139 Web Application Development/Repos/COMP2139-W2024/GBC_Travel-Group-42/GBC_Travel-Group-42/Views/Flight/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmxpZ2h0XERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ninja/Documents/George Brown Year 2 Documents/Winter Semester/COMP 2139 Web Application Development/Repos/COMP2139-W2024/GBC_Travel-Group-42/GBC_Travel-Group-42/Views/Flight/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmxpZ2h0XERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ninja/Documents/George Brown Year 2 Documents/Winter Semester/COMP 2139 Web Application Development/Repos/COMP2139-W2024/GBC_Travel-Group-42/GBC_Travel-Group-42/Views/Flight/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmxpZ2h0XEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ninja/Documents/George Brown Year 2 Documents/Winter Semester/COMP 2139 Web Application Development/Repos/COMP2139-W2024/GBC_Travel-Group-42/GBC_Travel-Group-42/Views/Flight/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmxpZ2h0XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ninja/Documents/George Brown Year 2 Documents/Winter Semester/COMP 2139 Web Application Development/Repos/COMP2139-W2024/GBC_Travel-Group-42/GBC_Travel-Group-42/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ninja/Documents/George Brown Year 2 Documents/Winter Semester/COMP 2139 Web Application Development/Repos/COMP2139-W2024/GBC_Travel-Group-42/GBC_Travel-Group-42/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ninja/Documents/George Brown Year 2 Documents/Winter Semester/COMP 2139 Web Application Development/Repos/COMP2139-W2024/GBC_Travel-Group-42/GBC_Travel-Group-42/Views/Home/Profile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcm9maWxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ninja/Documents/George Brown Year 2 Documents/Winter Semester/COMP 2139 Web Application Development/Repos/COMP2139-W2024/GBC_Travel-Group-42/GBC_Travel-Group-42/Views/Hotel/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG90ZWxcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ninja/Documents/George Brown Year 2 Documents/Winter Semester/COMP 2139 Web Application Development/Repos/COMP2139-W2024/GBC_Travel-Group-42/GBC_Travel-Group-42/Views/Hotel/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG90ZWxcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ninja/Documents/George Brown Year 2 Documents/Winter Semester/COMP 2139 Web Application Development/Repos/COMP2139-W2024/GBC_Travel-Group-42/GBC_Travel-Group-42/Views/Hotel/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG90ZWxcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ninja/Documents/George Brown Year 2 Documents/Winter Semester/COMP 2139 Web Application Development/Repos/COMP2139-W2024/GBC_Travel-Group-42/GBC_Travel-Group-42/Views/Hotel/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG90ZWxcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ninja/Documents/George Brown Year 2 Documents/Winter Semester/COMP 2139 Web Application Development/Repos/COMP2139-W2024/GBC_Travel-Group-42/GBC_Travel-Group-42/Views/Hotel/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG90ZWxcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ninja/Documents/George Brown Year 2 Documents/Winter Semester/COMP 2139 Web Application Development/Repos/COMP2139-W2024/GBC_Travel-Group-42/GBC_Travel-Group-42/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ninja/Documents/George Brown Year 2 Documents/Winter Semester/COMP 2139 Web Application Development/Repos/COMP2139-W2024/GBC_Travel-Group-42/GBC_Travel-Group-42/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ninja/Documents/George Brown Year 2 Documents/Winter Semester/COMP 2139 Web Application Development/Repos/COMP2139-W2024/GBC_Travel-Group-42/GBC_Travel-Group-42/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ninja/Documents/George Brown Year 2 Documents/Winter Semester/COMP 2139 Web Application Development/Repos/COMP2139-W2024/GBC_Travel-Group-42/GBC_Travel-Group-42/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ninja/Documents/George Brown Year 2 Documents/Winter Semester/COMP 2139 Web Application Development/Repos/COMP2139-W2024/GBC_Travel-Group-42/GBC_Travel-Group-42/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-tqspq07jy3

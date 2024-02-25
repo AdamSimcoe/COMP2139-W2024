@@ -1,0 +1,54 @@
+﻿@model List<GBC_Travel_Group_42.Models.BookFlight>
+
+@{
+    ViewData["Title"] = "Flight Bookings";
+}
+
+<div class="table-custom">
+    <h2 class="center-text">Flight Bookings</h2>
+
+    @if (Model.Any())
+    {
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Guest Name</th>
+                    <th>Email Address</th>
+                    <th>Origin</th>
+                    <th>Destination</th>
+                    <th>Departure Date</th>
+                    <th>Arrival Date</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+
+            @foreach (var flightBooking in Model)
+            {
+                <tbody>
+                    <tr>
+                        <td>@(flightBooking.GuestFirstName + " " + flightBooking.GuestLastName)</td>
+                        <td>@flightBooking.GuestEmail</td>
+                        <td>@flightBooking.Flight?.Origin</td>
+                        <td>@flightBooking.Flight?.Destination</td>
+                        <td>@flightBooking.Flight?.DepartureDateTime</td>
+                        <td>@flightBooking.Flight?.ArrivalDateTime</td>
+                        <td>$@flightBooking.Flight?.Price</td>
+                        <td>
+                            <a asp-action="Details" asp-route-id="@flightBooking.BookingFlightId" class="btn btn-info">Details</a>
+                            <a asp-action="Edit" asp-route-id="@flightBooking.BookingFlightId" class="btn btn-primary">Edit</a>
+                            <a asp-action="Delete" asp-route-id="@flightBooking.BookingFlightId" class="btn btn-danger">Delete</a>
+                        </td>
+                    </tr>
+                </tbody>
+            }
+        </table>
+    }
+    else
+    {
+        <p>No flight bookings available.</p>
+    }
+    <div class="mt-4">
+        <a asp-area="" asp-controller="BookFlight" asp-action="Create" class="btn btn-primary">Create New Flight Booking</a>
+        <a asp-area="" asp-controller="Flight" asp-action="Index" class="btn btn-info">View Flights</a>
+    </div>
+</div>
