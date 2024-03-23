@@ -34,6 +34,6 @@
 	<form asp-area="ProjectManagement" asp-controller="Tasks" asp-action="DeleteConfirmed" asp-route-id="@Model.ProjectTaskId" method="post">
 		<input type="hidden" asp-for="ProjectTaskId" />
 		<input type="submit" value="Delete" class="btn btn-danger" />
-		<a asp-action="Index">Back to List</a>
+		<a asp-action="Index" asp-route-projectId="@Model.ProjectId" class="btn btn-warning">Back to List</a>
 	</form>
 </div>

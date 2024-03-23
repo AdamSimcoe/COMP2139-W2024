@@ -7,7 +7,7 @@ using COMP2139_Labs.Areas.ProjectManagement.Models;
 namespace COMP2139_Labs.Areas.ProjectManagement.Controllers
 {
     [Area("ProjectManagement")]
-    [Route("[area]/[controller]")]
+    [Route("[area]/[controller]/[action]")]
     public class TasksController : Controller
     {
         private readonly AppDbContext _db;
@@ -148,7 +148,8 @@ namespace COMP2139_Labs.Areas.ProjectManagement.Controllers
             return NotFound();
         }
 
-        [HttpGet("Search/{projectId:int}/{searchString?}")]
+        //[HttpGet("Search/{projectId:int}/{searchString?}")]
+        [HttpGet("Search")]
         public async Task<IActionResult> Search(int projectId, string searchString)
         {
             var tasksQuery = _db.ProjectTasks.AsQueryable();

@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 namespace COMP2139_Labs.Areas.ProjectManagement.Controllers
 {
     [Area("ProjectManagement")]
-    [Route("[area]/[controller]")]
+    [Route("[area]/[controller]/[action]")]
     public class ProjectsController : Controller
     {
         private readonly AppDbContext _db;
