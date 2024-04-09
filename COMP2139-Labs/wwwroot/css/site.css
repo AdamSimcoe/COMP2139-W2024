@@ -37,6 +37,17 @@ body {
     background-color: white;
 }
 
+#adminDropdown {
+    background-color: transparent;
+    color: white;
+}
+
+#adminDropdown:hover, #adminDropdown:focus {
+    background-color: #add8e6;
+    color: white;
+}
+
+
 .comments-container .comment {
     background-color: #f0f0f0; 
     border-bottom: 1px solid black;

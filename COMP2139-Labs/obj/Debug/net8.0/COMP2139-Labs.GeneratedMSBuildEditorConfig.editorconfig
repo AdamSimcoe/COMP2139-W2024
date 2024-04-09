@@ -42,6 +42,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcRW5hYmxlQXV0aGVudGljYXRvci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/ninja/Documents/George Brown Year 2 Documents/Winter Semester/COMP 2139 Web Application Development/Repos/COMP2139-W2024/COMP2139-Labs/Areas/Identity/Pages/Account/Manage/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/ninja/Documents/George Brown Year 2 Documents/Winter Semester/COMP 2139 Web Application Development/Repos/COMP2139-W2024/COMP2139-Labs/Areas/Identity/Pages/Account/Manage/_ManageNav.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX01hbmFnZU5hdi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -130,8 +134,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxOb3RGb3VuZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/ninja/Documents/George Brown Year 2 Documents/Winter Semester/COMP 2139 Web Application Development/Repos/COMP2139-W2024/COMP2139-Labs/Views/RoleManager/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZU1hbmFnZXJcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/ninja/Documents/George Brown Year 2 Documents/Winter Semester/COMP 2139 Web Application Development/Repos/COMP2139-W2024/COMP2139-Labs/Views/Shared/Components/ProjectSummary/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcUHJvamVjdFN1bW1hcnlcRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ninja/Documents/George Brown Year 2 Documents/Winter Semester/COMP 2139 Web Application Development/Repos/COMP2139-W2024/COMP2139-Labs/Views/Shared/Components/UserRole/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcVXNlclJvbGVcRGVmYXVsdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ninja/Documents/George Brown Year 2 Documents/Winter Semester/COMP 2139 Web Application Development/Repos/COMP2139-W2024/COMP2139-Labs/Views/Shared/Error.cshtml]
@@ -156,6 +168,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/ninja/Documents/George Brown Year 2 Documents/Winter Semester/COMP 2139 Web Application Development/Repos/COMP2139-W2024/COMP2139-Labs/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ninja/Documents/George Brown Year 2 Documents/Winter Semester/COMP 2139 Web Application Development/Repos/COMP2139-W2024/COMP2139-Labs/Views/UserRoles/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclJvbGVzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ninja/Documents/George Brown Year 2 Documents/Winter Semester/COMP 2139 Web Application Development/Repos/COMP2139-W2024/COMP2139-Labs/Views/UserRoles/Manage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclJvbGVzXE1hbmFnZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ninja/Documents/George Brown Year 2 Documents/Winter Semester/COMP 2139 Web Application Development/Repos/COMP2139-W2024/COMP2139-Labs/Views/_ViewImports.cshtml]
