@@ -1,0 +1,52 @@
+﻿@model List<BookCarRental>
+
+@{
+    ViewData["Title"] = "Car Rental Bookings";
+}
+
+<div class="table-custom">
+    <h2 class="center-text">Car Rental Bookings</h2>
+
+    @if (Model.Any())
+    {
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Guest Name</th>
+                    <th>Email Address</th>
+                    <th>Car Make</th>
+                    <th>Rental Pick-Up Time</th>
+                    <th>Rental Return Time</th>
+                    <th>Total Price</th>
+                </tr>
+            </thead>
+
+            @foreach (var carRentalBooking in Model)
+            {
+                <tbody>
+                    <tr>
+                        <td>@(carRentalBooking.GuestFirstName + " " + carRentalBooking.GuestLastName)</td>
+                        <td>@carRentalBooking.GuestEmail</td>
+                        <td>@carRentalBooking.CarRental?.CarRentalMake</td>
+                        <td>@carRentalBooking.RentalPickupDateTime</td>
+                        <td>@carRentalBooking.RentalReturnDateTime</td>
+                        <td>$@carRentalBooking.RentalTotalPrice</td>
+                        <td>
+                            <a asp-action="Details" asp-route-id="@carRentalBooking.BookingCarRentalId" class="btn btn-info">Details</a>
+                            <a asp-action="Edit" asp-route-id="@carRentalBooking.BookingCarRentalId" class="btn btn-primary">Edit</a>
+                            <a asp-action="Delete" asp-route-id="@carRentalBooking.BookingCarRentalId" class="btn btn-danger">Delete</a>
+                        </td>
+                    </tr>
+                </tbody>
+            }
+        </table>
+    }
+    else
+    {
+        <p>No car rental bookings available.</p>
+    }
+    <div class="mt-4">
+        <a asp-area="BookingManagement" asp-controller="BookCarRental" asp-action="Create" class="btn btn-primary">Create New Car Rental Booking</a>
+        <a asp-area="BookingDetails" asp-controller="CarRental" asp-action="Index" class="btn btn-info">View Car Rentals</a>
+    </div>
+</div>

@@ -17,176 +17,13 @@ namespace GBC_Travel_Group_42.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "8.0.2")
+                .HasDefaultSchema("Identity")
+                .HasAnnotation("ProductVersion", "8.0.3")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("GBC_Travel_Group_42.Models.BookCarRental", b =>
-                {
-                    b.Property<int>("BookingCarRentalId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("BookingCarRentalId"));
-
-                    b.Property<string>("Accommodations")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("CarRentalId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("GuestEmail")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("GuestFirstName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("GuestLastName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("RentalDuration")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("RentalPickupDateTime")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("RentalReturnDateTime")
-                        .HasColumnType("datetime2");
-
-                    b.Property<decimal>("RentalTotalPrice")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.HasKey("BookingCarRentalId");
-
-                    b.HasIndex("CarRentalId");
-
-                    b.ToTable("BookingCarRentals");
-
-                    b.HasData(
-                        new
-                        {
-                            BookingCarRentalId = 1,
-                            Accommodations = "extra seating",
-                            CarRentalId = 1,
-                            GuestEmail = "fakeemail3@yes.com",
-                            GuestFirstName = "Adam",
-                            GuestLastName = "Simcoe",
-                            RentalDuration = 3,
-                            RentalPickupDateTime = new DateTime(2024, 2, 21, 10, 30, 0, 0, DateTimeKind.Unspecified),
-                            RentalReturnDateTime = new DateTime(2024, 2, 24, 10, 30, 0, 0, DateTimeKind.Unspecified),
-                            RentalTotalPrice = 449.97m
-                        });
-                });
-
-            modelBuilder.Entity("GBC_Travel_Group_42.Models.BookFlight", b =>
-                {
-                    b.Property<int>("BookingFlightId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("BookingFlightId"));
-
-                    b.Property<string>("Accommodations")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("FlightId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("GuestEmail")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("GuestFirstName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("GuestLastName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("BookingFlightId");
-
-                    b.HasIndex("FlightId");
-
-                    b.ToTable("BookingFlights");
-
-                    b.HasData(
-                        new
-                        {
-                            BookingFlightId = 1,
-                            Accommodations = "Need extra luggage space",
-                            FlightId = 1,
-                            GuestEmail = "fakeemail@yes.com",
-                            GuestFirstName = "John",
-                            GuestLastName = "Doe"
-                        });
-                });
-
-            modelBuilder.Entity("GBC_Travel_Group_42.Models.BookHotel", b =>
-                {
-                    b.Property<int>("BookingHotelId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("BookingHotelId"));
-
-                    b.Property<string>("Accommodations")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("CheckInDateTime")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("CheckOutDateTime")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("ExpectedStayDuration")
-                        .HasColumnType("int");
-
-                    b.Property<string>("GuestEmail")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("GuestFirstName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("GuestLastName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("HotelId")
-                        .HasColumnType("int");
-
-                    b.Property<decimal>("HotelTotalPrice")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.HasKey("BookingHotelId");
-
-                    b.HasIndex("HotelId");
-
-                    b.ToTable("BookingHotels");
-
-                    b.HasData(
-                        new
-                        {
-                            BookingHotelId = 1,
-                            Accommodations = "Need extra towels",
-                            CheckInDateTime = new DateTime(2024, 2, 22, 13, 30, 0, 0, DateTimeKind.Unspecified),
-                            CheckOutDateTime = new DateTime(2024, 2, 25, 13, 30, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedStayDuration = 3,
-                            GuestEmail = "fakeemail2@yes.com",
-                            GuestFirstName = "Jane",
-                            GuestLastName = "Doe",
-                            HotelId = 1,
-                            HotelTotalPrice = 1199.97m
-                        });
-                });
-
-            modelBuilder.Entity("GBC_Travel_Group_42.Models.CarRental", b =>
+            modelBuilder.Entity("GBC_Travel_Group_42.Areas.BookingDetails.Models.CarRental", b =>
                 {
                     b.Property<int>("CarRentalId")
                         .ValueGeneratedOnAdd()
@@ -209,7 +46,7 @@ namespace GBC_Travel_Group_42.Migrations
 
                     b.HasKey("CarRentalId");
 
-                    b.ToTable("CarRentals");
+                    b.ToTable("CarRentals", "Identity");
 
                     b.HasData(
                         new
@@ -294,7 +131,7 @@ namespace GBC_Travel_Group_42.Migrations
                         });
                 });
 
-            modelBuilder.Entity("GBC_Travel_Group_42.Models.Flight", b =>
+            modelBuilder.Entity("GBC_Travel_Group_42.Areas.BookingDetails.Models.Flight", b =>
                 {
                     b.Property<int>("FlightId")
                         .ValueGeneratedOnAdd()
@@ -331,7 +168,7 @@ namespace GBC_Travel_Group_42.Migrations
 
                     b.HasKey("FlightId");
 
-                    b.ToTable("Flights");
+                    b.ToTable("Flights", "Identity");
 
                     b.HasData(
                         new
@@ -456,7 +293,7 @@ namespace GBC_Travel_Group_42.Migrations
                         });
                 });
 
-            modelBuilder.Entity("GBC_Travel_Group_42.Models.Hotel", b =>
+            modelBuilder.Entity("GBC_Travel_Group_42.Areas.BookingDetails.Models.Hotel", b =>
                 {
                     b.Property<int>("HotelId")
                         .ValueGeneratedOnAdd()
@@ -483,7 +320,7 @@ namespace GBC_Travel_Group_42.Migrations
 
                     b.HasKey("HotelId");
 
-                    b.ToTable("Hotels");
+                    b.ToTable("Hotels", "Identity");
 
                     b.HasData(
                         new
@@ -578,37 +415,497 @@ namespace GBC_Travel_Group_42.Migrations
                         });
                 });
 
-            modelBuilder.Entity("GBC_Travel_Group_42.Models.BookCarRental", b =>
+            modelBuilder.Entity("GBC_Travel_Group_42.Areas.BookingManagement.Models.ApplicationUser", b =>
                 {
-                    b.HasOne("GBC_Travel_Group_42.Models.CarRental", "CarRental")
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("AccessFailedCount")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ConcurrencyStamp")
+                        .IsConcurrencyToken()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Email")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<bool>("EmailConfirmed")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("FirstName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LastName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("LockoutEnabled")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTimeOffset?>("LockoutEnd")
+                        .HasColumnType("datetimeoffset");
+
+                    b.Property<string>("NormalizedEmail")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<string>("NormalizedUserName")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<string>("PasswordHash")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhoneNumber")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("PhoneNumberConfirmed")
+                        .HasColumnType("bit");
+
+                    b.Property<byte[]>("ProfilePicture")
+                        .HasColumnType("varbinary(max)");
+
+                    b.Property<string>("SecurityStamp")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("TwoFactorEnabled")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("UserName")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<int>("UsernameChangeLimit")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("NormalizedEmail")
+                        .HasDatabaseName("EmailIndex");
+
+                    b.HasIndex("NormalizedUserName")
+                        .IsUnique()
+                        .HasDatabaseName("UserNameIndex")
+                        .HasFilter("[NormalizedUserName] IS NOT NULL");
+
+                    b.ToTable("User", "Identity");
+                });
+
+            modelBuilder.Entity("GBC_Travel_Group_42.Areas.BookingManagement.Models.BookCarRental", b =>
+                {
+                    b.Property<int>("BookingCarRentalId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("BookingCarRentalId"));
+
+                    b.Property<string>("Accommodations")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("CarRentalId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("GuestEmail")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("GuestFirstName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("GuestLastName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("RentalDuration")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("RentalPickupDateTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("RentalReturnDateTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<decimal>("RentalTotalPrice")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("BookingCarRentalId");
+
+                    b.HasIndex("CarRentalId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("BookingCarRentals", "Identity");
+
+                    b.HasData(
+                        new
+                        {
+                            BookingCarRentalId = 1,
+                            Accommodations = "extra seating",
+                            CarRentalId = 1,
+                            GuestEmail = "fakeemail3@yes.com",
+                            GuestFirstName = "Adam",
+                            GuestLastName = "Simcoe",
+                            RentalDuration = 3,
+                            RentalPickupDateTime = new DateTime(2024, 2, 21, 10, 30, 0, 0, DateTimeKind.Unspecified),
+                            RentalReturnDateTime = new DateTime(2024, 2, 24, 10, 30, 0, 0, DateTimeKind.Unspecified),
+                            RentalTotalPrice = 449.97m
+                        });
+                });
+
+            modelBuilder.Entity("GBC_Travel_Group_42.Areas.BookingManagement.Models.BookFlight", b =>
+                {
+                    b.Property<int>("BookingFlightId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("BookingFlightId"));
+
+                    b.Property<string>("Accommodations")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("FlightId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("GuestEmail")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("GuestFirstName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("GuestLastName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("BookingFlightId");
+
+                    b.HasIndex("FlightId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("BookingFlights", "Identity");
+
+                    b.HasData(
+                        new
+                        {
+                            BookingFlightId = 1,
+                            Accommodations = "Need extra luggage space",
+                            FlightId = 1,
+                            GuestEmail = "fakeemail@yes.com",
+                            GuestFirstName = "John",
+                            GuestLastName = "Doe"
+                        });
+                });
+
+            modelBuilder.Entity("GBC_Travel_Group_42.Areas.BookingManagement.Models.BookHotel", b =>
+                {
+                    b.Property<int>("BookingHotelId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("BookingHotelId"));
+
+                    b.Property<string>("Accommodations")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CheckInDateTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("CheckOutDateTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("ExpectedStayDuration")
+                        .HasColumnType("int");
+
+                    b.Property<string>("GuestEmail")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("GuestFirstName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("GuestLastName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("HotelId")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("HotelTotalPrice")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("BookingHotelId");
+
+                    b.HasIndex("HotelId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("BookingHotels", "Identity");
+
+                    b.HasData(
+                        new
+                        {
+                            BookingHotelId = 1,
+                            Accommodations = "Need extra towels",
+                            CheckInDateTime = new DateTime(2024, 2, 22, 13, 30, 0, 0, DateTimeKind.Unspecified),
+                            CheckOutDateTime = new DateTime(2024, 2, 25, 13, 30, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedStayDuration = 3,
+                            GuestEmail = "fakeemail2@yes.com",
+                            GuestFirstName = "Jane",
+                            GuestLastName = "Doe",
+                            HotelId = 1,
+                            HotelTotalPrice = 1199.97m
+                        });
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("ConcurrencyStamp")
+                        .IsConcurrencyToken()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<string>("NormalizedName")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("NormalizedName")
+                        .IsUnique()
+                        .HasDatabaseName("RoleNameIndex")
+                        .HasFilter("[NormalizedName] IS NOT NULL");
+
+                    b.ToTable("Role", "Identity");
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("ClaimType")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ClaimValue")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("RoleId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("RoleId");
+
+                    b.ToTable("RoleClaims", "Identity");
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("ClaimType")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ClaimValue")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("UserClaims", "Identity");
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
+                {
+                    b.Property<string>("LoginProvider")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("ProviderKey")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("ProviderDisplayName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("LoginProvider", "ProviderKey");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("UserLogins", "Identity");
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<string>", b =>
+                {
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("RoleId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("UserId", "RoleId");
+
+                    b.HasIndex("RoleId");
+
+                    b.ToTable("UserRoles", "Identity");
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
+                {
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("LoginProvider")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Value")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("UserId", "LoginProvider", "Name");
+
+                    b.ToTable("UserTokens", "Identity");
+                });
+
+            modelBuilder.Entity("GBC_Travel_Group_42.Areas.BookingManagement.Models.BookCarRental", b =>
+                {
+                    b.HasOne("GBC_Travel_Group_42.Areas.BookingDetails.Models.CarRental", "CarRental")
                         .WithMany()
                         .HasForeignKey("CarRentalId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("GBC_Travel_Group_42.Areas.BookingManagement.Models.ApplicationUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId");
+
                     b.Navigation("CarRental");
+
+                    b.Navigation("User");
                 });
 
-            modelBuilder.Entity("GBC_Travel_Group_42.Models.BookFlight", b =>
+            modelBuilder.Entity("GBC_Travel_Group_42.Areas.BookingManagement.Models.BookFlight", b =>
                 {
-                    b.HasOne("GBC_Travel_Group_42.Models.Flight", "Flight")
+                    b.HasOne("GBC_Travel_Group_42.Areas.BookingDetails.Models.Flight", "Flight")
                         .WithMany()
                         .HasForeignKey("FlightId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("GBC_Travel_Group_42.Areas.BookingManagement.Models.ApplicationUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId");
+
                     b.Navigation("Flight");
+
+                    b.Navigation("User");
                 });
 
-            modelBuilder.Entity("GBC_Travel_Group_42.Models.BookHotel", b =>
+            modelBuilder.Entity("GBC_Travel_Group_42.Areas.BookingManagement.Models.BookHotel", b =>
                 {
-                    b.HasOne("GBC_Travel_Group_42.Models.Hotel", "Hotel")
+                    b.HasOne("GBC_Travel_Group_42.Areas.BookingDetails.Models.Hotel", "Hotel")
                         .WithMany()
                         .HasForeignKey("HotelId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("GBC_Travel_Group_42.Areas.BookingManagement.Models.ApplicationUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId");
+
                     b.Navigation("Hotel");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
+                {
+                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
+                        .WithMany()
+                        .HasForeignKey("RoleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
+                {
+                    b.HasOne("GBC_Travel_Group_42.Areas.BookingManagement.Models.ApplicationUser", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
+                {
+                    b.HasOne("GBC_Travel_Group_42.Areas.BookingManagement.Models.ApplicationUser", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<string>", b =>
+                {
+                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
+                        .WithMany()
+                        .HasForeignKey("RoleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("GBC_Travel_Group_42.Areas.BookingManagement.Models.ApplicationUser", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
+                {
+                    b.HasOne("GBC_Travel_Group_42.Areas.BookingManagement.Models.ApplicationUser", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

@@ -1,0 +1,98 @@
+﻿@model List<Hotel>
+@using Microsoft.AspNetCore.Authorization
+@inject IAuthorizationService AuthorizationService
+
+@{
+    ViewData["Title"] = "Hotel Bookings";
+    bool isAdmin = (await AuthorizationService.AuthorizeAsync(User, "AdminAccess")).Succeeded;
+    string container = isAdmin ? "col-md-12" : "col-md-8";
+}
+
+<div class="search-form">
+    <h2 class="search-title">Search Hotels</h2>
+    <form asp-action="Index" method="get">
+        <div class="form-group">
+            <label for="searchName">Search by Hotel Name</label>
+            <input type="text" class="form-control" id="searchName" name="searchName" placeholder="ex. Hotel Le Grand Mazarin">
+        </div>
+        <div class="form-group">
+            <label for="searchLocation">Search by Hotel Location</label>
+            <input type="text" class="form-control" id="searchLocation" name="searchLocation" placeholder="ex. Paris">
+        </div>
+        <div class="form-group">
+            <label for="rating">Filter by minimum rating</label>
+            <select class="form-control" id="rating" name="rating">
+                <option value="">ex. 3 stars</option>
+                @for (int i = 1; i <= 5; i++)
+                {
+                    <option value="@i">@i star@(i > 1 ? "s" : "")</option>
+                }
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="maxPricePerNight">Filter by maximum price per night</label>
+            <input type="text" class="form-control" id="maxPricePerNight" name="maxPricePerNight" placeholder="ex. 199.99">
+        </div>
+        <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+</div>
+
+<div class="row justify-content-center">
+    <div class="@container">
+		<div class="table-custom">
+			<h2 class="center-text">Hotel Bookings</h2>
+
+			@if (Model.Any())
+			{
+				<table class="table">
+					<thead>
+						<tr>
+							<th>Hotel Name</th>
+							<th>Hotel Location</th>
+							<th>Price Per Night</th>
+							<th>Rating</th>
+						</tr>
+					</thead>
+
+					@foreach (var hotel in Model)
+					{
+						<tbody>
+							<tr>
+								<td>@hotel.HotelName</td>
+								<td>@hotel.HotelLocation</td>
+								<td>$@hotel.PricePerNight</td>
+								<td>@hotel.Rating stars</td>
+								<td>
+									<a asp-area="BookingManagement" asp-controller="BookHotel" asp-action="Create" asp-route-hotelId="@hotel.HotelId" class="btn btn-info">Book</a>
+									<a asp-action="Details" asp-route-id="@hotel.HotelId" class="btn btn-info">Details</a>
+									@if ((await AuthorizationService.AuthorizeAsync(User, "AdminAccess")).Succeeded)
+									{
+										<a asp-action="Edit" asp-route-id="@hotel.HotelId" class="btn btn-primary">Edit</a>
+										<a asp-action="Delete" asp-route-id="@hotel.HotelId" class="btn btn-danger">Delete</a>
+									}
+
+								</td>
+							</tr>
+						</tbody>
+					}
+				</table>
+			}
+			else
+			{
+				<p>No hotel bookings available.</p>
+			}
+
+			<div class="mt-4">
+				@if ((await AuthorizationService.AuthorizeAsync(User, "AdminAccess")).Succeeded)
+				{
+					<a asp-area="BookingDetails" asp-controller="Hotel" asp-action="Create" class="btn btn-primary">Create New Hotel</a>
+				}
+				@if ((await AuthorizationService.AuthorizeAsync(User, "StaffAccess")).Succeeded)
+				{
+					<a asp-area="BookingManagement" asp-controller="BookHotel" asp-action="Index" class="btn btn-info">View Hotel Bookings</a>
+				}
+			</div>
+		</div>
+    </div>
+</div>
+

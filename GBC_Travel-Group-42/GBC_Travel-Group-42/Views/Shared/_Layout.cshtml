@@ -1,4 +1,10 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Identity
+@using GBC_Travel_Group_42.Areas.BookingManagement.Models
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -22,17 +28,53 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Flight" asp-action="Index">Flight Bookings</a>
+                            <a class="nav-link text-dark" asp-area="BookingDetails" asp-controller="Flight" asp-action="Index">Flight Bookings</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Hotel" asp-action="Index">Hotel Bookings</a>
+                            <a class="nav-link text-dark" asp-area="BookingDetails" asp-controller="Hotel" asp-action="Index">Hotel Bookings</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="CarRental" asp-action="Index">Car Rental Bookings</a>
+                            <a class="nav-link text-dark" asp-area="BookingDetails" asp-controller="CarRental" asp-action="Index">Car Rental Bookings</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="navlink text-dark" asp-area="" asp-controller="Home" asp-action="Profile">Profile</a>
-                        </li>
+                        
+                        @if (SignInManager.IsSignedIn(User))
+                        {
+                            @await Component.InvokeAsync("UserRole");
+                            
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="BookingManagement" asp-controller="MyBookings" asp-action="Index">My Bookings</a>
+                            </li>
+
+                            <li class="nav-item d-flex align-items-center">
+
+                                @if (UserManager.GetUserAsync(User).Result.ProfilePicture != null)
+                                {
+                                    <img id="profilePicture" style="width: 40px; height: 40px; border-radius: 20px; object-fit:cover; margin-right: 2px;"
+                                         src="data:image/*;base64,@(Convert.ToBase64String(UserManager.GetUserAsync(User).Result.ProfilePicture))" />
+                                }
+                                <a class="nav-link text-dark"
+                                    asp-area="Identity"
+                                    asp-page="/Account/Manage/Index" title="Manage your Profile">Hello @User.Identity?.Name</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <form asp-area="Identity" asp-page="/Account/Logout" method="post">
+                                    <button type="submit" class="nav-link btn btn-link text-dark" style="cursor:pointer">Logout</button>
+                                </form>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="Identity"
+                                    asp-page="/Account/Login"><i class="fa fa-sign-in-alt"></i>Login</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="Identity"
+                                   asp-page="/Account/Register"><i class="fa fa-user-plus"></i>Register</a>
+                            </li>
+                        }
                     </ul>
                 </div>
             </div>

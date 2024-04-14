@@ -1,0 +1,31 @@
+﻿﻿@using GBC_Travel_Group_42.Models.ViewModels
+@model List<ManageUserRolesViewModel>
+
+@{
+	ViewData["Title"] = "Manage Roles for User";
+}
+
+<div class="row justify-content-center">
+    <div class="col-md-4">
+        <div class="form-box">
+            <h4>Manage User Roles for @ViewBag.UserName</h4>
+            <hr />
+            <form method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                @for (int i = 0; i < Model.Count; i++)
+                {
+                    <div class="form-check">
+                        <input type="hidden" asp-for="@Model[i].RoleId" />
+                        <input type="hidden" asp-for="@Model[i].RoleName" />
+                        <input asp-for="@Model[i].Selected" class="form-check-input" id="@Model[i].RoleName" />
+                        <label class="form-check-label" for="@Model[i].RoleName">@Model[i].RoleName</label>
+                    </div>
+                }
+                <div class="mt-3">
+                    <input type="submit" value="Update" class="btn btn-primary" />
+                    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

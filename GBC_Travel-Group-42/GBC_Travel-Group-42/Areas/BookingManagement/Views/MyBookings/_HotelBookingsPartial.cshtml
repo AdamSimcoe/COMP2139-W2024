@@ -1,0 +1,31 @@
+﻿@model IEnumerable<GBC_Travel_Group_42.Areas.BookingManagement.Models.BookHotel>
+
+@if (Model.Any())
+{
+	<h2 class="center-text">My Hotel Bookings</h2>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Hotel Name</th>
+				<th>Hotel Location</th>
+				<th>Check-In Time</th>
+				<th>Check-Out Time</th>
+				<th>Total Price</th>
+			</tr>
+		</thead>
+
+		<tbody>
+			@foreach (var hotelBooking in Model)
+			{
+				<tr>
+				<td>@hotelBooking.Hotel?.HotelName</td>
+				<td>@hotelBooking.Hotel?.HotelLocation</td>
+				<td>@hotelBooking.CheckInDateTime</td>
+				<td>@hotelBooking.CheckOutDateTime</td>
+				<td>$@hotelBooking.HotelTotalPrice</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+}
+

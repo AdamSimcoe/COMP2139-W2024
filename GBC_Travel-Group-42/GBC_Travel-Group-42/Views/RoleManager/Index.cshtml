@@ -1,0 +1,40 @@
+﻿@model List<IdentityRole>
+@{
+	ViewData["Title"] = "Role Manager";
+}
+<div class="row justify-content-center">
+	<div class="col-md-5">
+		<div class="form-box">
+			<h2 class="center-text">Role Manager</h2>
+			<form method="post" asp-action="AddRoles" asp-controller="RoleManager">
+				<div class="input-group">
+					<input name="roleName" class="form-control" />
+					<span>
+						<button class="btn btn-info">Add New Roles</button>
+					</span>
+				</div>
+			</form>
+		</div>
+
+		<div class="table-custom">
+			<table>
+				<thead>
+					<tr>
+						<th>Id</th>
+						<th>Role</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					@foreach(var role in Model)
+					{
+						<tr>
+							<td>@role.Id</td>
+							<td>@role.Name</td>
+						</tr>
+					}
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>

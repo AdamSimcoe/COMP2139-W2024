@@ -1,9 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using GBC_Travel_Group_42.Models;
+using GBC_Travel_Group_42.Areas.BookingDetails.Models;
+using GBC_Travel_Group_42.Areas.BookingManagement.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
 
 namespace GBC_Travel_Group_42.Data
 {
-	public class AppDbContext : DbContext
+    public class AppDbContext : IdentityDbContext<ApplicationUser>
 	{
 		public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
 		{
@@ -24,7 +27,50 @@ namespace GBC_Travel_Group_42.Data
 
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{
-			modelBuilder.Entity<Flight>().HasData(
+            base.OnModelCreating(modelBuilder);
+
+			// Re-name Identity tables
+
+            modelBuilder.HasDefaultSchema("Identity");
+
+            modelBuilder.Entity<ApplicationUser>(entity =>
+            {
+                entity.ToTable(name: "User");
+            });
+
+            modelBuilder.Entity<IdentityRole>(entity =>
+            {
+                entity.ToTable(name: "Role");
+            });
+
+            modelBuilder.Entity<IdentityUserRole<string>>(entity =>
+            {
+                entity.ToTable(name: "UserRoles");
+            });
+
+            modelBuilder.Entity<IdentityUserClaim<string>>(entity =>
+            {
+                entity.ToTable(name: "UserClaims");
+            });
+
+            modelBuilder.Entity<IdentityUserLogin<string>>(entity =>
+            {
+                entity.ToTable(name: "UserLogins");
+            });
+
+            modelBuilder.Entity<IdentityRoleClaim<string>>(entity =>
+            {
+                entity.ToTable(name: "RoleClaims");
+            });
+
+            modelBuilder.Entity<IdentityUserToken<string>>(entity =>
+            {
+                entity.ToTable(name: "UserTokens");
+            });
+
+			// Pre-populate Booking Tables
+
+            modelBuilder.Entity<Flight>().HasData(
 			   new Flight { FlightId = 1, FlightNumber = "KH734", Origin = "Toronto, CA", Destination = "Tokyo, JP", DepartureDateTime = new DateTime(2024, 3, 1, 11, 30, 0), ArrivalDateTime = new DateTime(2024, 3, 1, 22, 30, 0), Price = 1349.99m, Rating = 5, MaximumOccupancy = 2 },
 			   new Flight { FlightId = 2, FlightNumber = "KH767", Origin = "Montreal, CA", Destination = "Sydney, AU", DepartureDateTime = new DateTime(2024, 3, 1, 9, 30, 0), ArrivalDateTime = new DateTime(2024, 3, 2, 1, 30, 0), Price = 1299.99m, Rating = 4, MaximumOccupancy = 2 },
 			   new Flight { FlightId = 3, FlightNumber = "KF647", Origin = "London, UK", Destination = "Los Angeles, US", DepartureDateTime = new DateTime(2024, 3, 2, 13, 30, 0), ArrivalDateTime = new DateTime(2024, 3, 2, 17, 0, 0), Price = 899.99m, Rating = 3, MaximumOccupancy = 2 },
@@ -74,8 +120,6 @@ namespace GBC_Travel_Group_42.Data
 			modelBuilder.Entity<BookCarRental>().HasData(
 				 new BookCarRental { BookingCarRentalId = 1, GuestFirstName = "Adam", GuestLastName = "Simcoe", GuestEmail = "fakeemail3@yes.com", Accommodations = "extra seating", CarRentalId = 1, RentalPickupDateTime = new DateTime(2024, 2, 21, 10, 30, 0), RentalDuration = 3, RentalReturnDateTime = new DateTime(2024, 2, 24, 10, 30, 0), RentalTotalPrice = 449.97m }
             );
-
-			base.OnModelCreating(modelBuilder);
 		}
 	}
 }

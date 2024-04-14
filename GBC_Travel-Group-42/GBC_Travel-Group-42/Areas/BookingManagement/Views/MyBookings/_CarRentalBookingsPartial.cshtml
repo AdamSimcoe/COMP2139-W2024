@@ -1,0 +1,28 @@
+﻿@model IEnumerable<GBC_Travel_Group_42.Areas.BookingManagement.Models.BookCarRental>
+
+@if (Model.Any())
+{
+	<h2 class="center-text">My Car Rental Bookings</h2>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Car Make</th>
+				<th>Rental Pick-Up Time</th>
+				<th>Rental Return Time</th>
+				<th>Total Price</th>
+			</tr>
+		</thead>
+
+		<tbody>
+			@foreach (var carRentalBooking in Model)
+			{
+				<tr>
+					<td>@carRentalBooking.CarRental?.CarRentalMake</td>
+					<td>@carRentalBooking.RentalPickupDateTime</td>
+					<td>@carRentalBooking.RentalReturnDateTime</td>
+					<td>$@carRentalBooking.RentalTotalPrice</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+}

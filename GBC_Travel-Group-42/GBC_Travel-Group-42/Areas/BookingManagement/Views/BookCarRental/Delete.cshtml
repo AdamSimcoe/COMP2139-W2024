@@ -1,0 +1,76 @@
+﻿@model BookCarRental
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<div class="delete-box">
+    <h1>Delete Car Rental Booking</h1>
+
+    <h3>Are you sure you want to delete this?</h3>
+    <div>
+        <hr />
+        <dl class="row">
+            <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.GuestFirstName)
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.GuestFirstName)
+            </dd>
+            <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.GuestLastName)
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.GuestLastName)
+            </dd>
+            <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.GuestEmail)
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.GuestEmail)
+            </dd>
+            <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.Accommodations)
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.Accommodations)
+            </dd>
+            <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.CarRental.CarRentalMake)
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.CarRental.CarRentalMake)
+            </dd>
+            <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.RentalPickupDateTime)
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.RentalPickupDateTime)
+            </dd>
+            <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.RentalDuration)
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.RentalDuration)
+            </dd>
+            <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.RentalReturnDateTime)
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.RentalReturnDateTime)
+            </dd>
+            <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.RentalTotalPrice)
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.RentalTotalPrice)
+            </dd>
+        </dl>
+    
+        <form asp-area="BookingManagement" asp-controller="BookCarRental" asp-action="DeleteConfirmed" asp-route-id="@Model.BookingCarRentalId" method="post">
+            <input type="hidden" asp-for="BookingCarRentalId" />
+            <input type="submit" value="Delete" class="btn btn-danger" /> |
+            <a asp-action="Index">Back to List</a>
+        </form>
+    </div>
+</div>
